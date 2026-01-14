@@ -1,16 +1,43 @@
 package main
 
 import (
-	"fmt"
+	"go-urlshortener/internal/config"
+	"log/slog"
+	"os"
+)
 
-	config "github.com/Adopten123/go-urlshortener/internal/config"
+const (
+	envLocal = "local"
+	envDev   = "dev"
+	envProd  = "prod"
 )
 
 func main() {
 	config := config.MustLoad()
-	fmt.Println(config)
-	// TODO: init logger. Libs: log/slog
+
+	logger := setupLogger(config.Env)
+	logger.Info("starting url-shortener...", slog.String("env", config.Env))
+	logger.Debug("debug messages are enabled...")
 	// TODO: init storage. Libs: sqlite
 	// TODO: init router. Libs: chi, "chi render"
 	// TODO: run server.
+}
+
+func setupLogger(env string) *slog.Logger {
+	var logger *slog.Logger
+	switch env {
+	case envLocal:
+		logger = slog.New(
+			slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
+		)
+	case envDev:
+		logger = slog.New(
+			slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
+		)
+	case envProd:
+		logger = slog.New(
+			slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelInfo}),
+		)
+	}
+	return logger
 }
