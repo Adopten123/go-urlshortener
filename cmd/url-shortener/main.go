@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-urlshortener/internal/config"
+
+	config "github.com/Adopten123/go-urlshortener/internal/config"
 )
 
 func main() {
