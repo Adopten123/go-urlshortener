@@ -1,4 +1,4 @@
-module go-urlshortener
+module github.com/Adopten123/go-url-shortener
 
 go 1.24
 
