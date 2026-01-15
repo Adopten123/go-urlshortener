@@ -2,10 +2,12 @@ package main
 
 import (
 	"go-urlshortener/internal/config"
+	"go-urlshortener/internal/http-server/handlers/url/save"
 	"go-urlshortener/internal/lib/logger/handlers/slogpretty"
 	"go-urlshortener/internal/lib/logger/sl"
 	"go-urlshortener/internal/storage/sqlite"
 	"log/slog"
+	"net/http"
 	"os"
 
 	"github.com/go-chi/chi/v5"
@@ -40,8 +42,23 @@ func main() {
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.URLFormat)
 
-	_ = storage
-	// TODO: run server.
+	router.Post("/url", save.New(logger, storage))
+
+	logger.Info("starting url-shortener...", slog.String("address", config.Address))
+
+	server := &http.Server{
+		Addr:         config.Address,
+		Handler:      router,
+		ReadTimeout:  config.HTTPServer.Timeout,
+		WriteTimeout: config.HTTPServer.Timeout,
+		IdleTimeout:  config.HTTPServer.IdleTimeout,
+	}
+
+	if err := server.ListenAndServe(); err != nil {
+		logger.Error("failed to start http server")
+	}
+
+	logger.Error("server shutdown")
 }
 
 func setupLogger(env string) *slog.Logger {
