@@ -2,6 +2,7 @@ package main
 
 import (
 	"go-urlshortener/internal/config"
+	"go-urlshortener/internal/lib/logger/handlers/slogpretty"
 	"go-urlshortener/internal/lib/logger/sl"
 	"go-urlshortener/internal/storage/sqlite"
 	"log/slog"
@@ -47,9 +48,7 @@ func setupLogger(env string) *slog.Logger {
 	var logger *slog.Logger
 	switch env {
 	case envLocal:
-		logger = slog.New(
-			slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
-		)
+		logger = setupPrettySlog()
 	case envDev:
 		logger = slog.New(
 			slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
@@ -60,4 +59,14 @@ func setupLogger(env string) *slog.Logger {
 		)
 	}
 	return logger
+}
+
+func setupPrettySlog() *slog.Logger {
+	opts := slogpretty.PrettyHandlerOptions{
+		SlogOpts: &slog.HandlerOptions{
+			Level: slog.LevelDebug,
+		},
+	}
+	handler := opts.NewPrettyHandler(os.Stdout)
+	return slog.New(handler)
 }
