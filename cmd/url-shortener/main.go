@@ -2,6 +2,8 @@ package main
 
 import (
 	"go-urlshortener/internal/config"
+	"go-urlshortener/internal/lib/logger/sl"
+	"go-urlshortener/internal/storage/sqlite"
 	"log/slog"
 	"os"
 )
@@ -18,7 +20,13 @@ func main() {
 	logger := setupLogger(config.Env)
 	logger.Info("starting url-shortener...", slog.String("env", config.Env))
 	logger.Debug("debug messages are enabled...")
-	// TODO: init storage. Libs: sqlite
+
+	storage, err := sqlite.NewStorage(config.StoragePath)
+	if err != nil {
+		logger.Error("failed to init sqlite storage", sl.Err(err))
+		os.Exit(1)
+	}
+	_ = storage
 	// TODO: init router. Libs: chi, "chi render"
 	// TODO: run server.
 }
