@@ -36,6 +36,8 @@ func main() {
 
 	router.Use(middleware.RequestID)
 	router.Use(mwLogger.New(logger))
+	router.Use(middleware.Recoverer)
+	router.Use(middleware.URLFormat)
 
 	_ = storage
 	// TODO: run server.
