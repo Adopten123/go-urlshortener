@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967ee3de-e259-47b1-8398-b44cef680a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/http-server/handlers/redirect/redirect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/http-server/handlers/url/delete/delete.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/url-shortener/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/url-shortener/main.go" afterDir="false" />
     </list>

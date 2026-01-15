@@ -14,6 +14,7 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 
+	Delete "go-urlshortener/internal/http-server/handlers/url/delete"
 	mwLogger "go-urlshortener/internal/http-server/middleware/logger"
 )
 
@@ -45,6 +46,7 @@ func main() {
 
 	router.Post("/url", save.New(logger, storage))
 	router.Get("/{alias}", redirect.New(logger, storage))
+	router.Delete("/url/{alias}", Delete.New(logger, storage))
 
 	logger.Info("starting url-shortener...", slog.String("address", config.Address))
 
