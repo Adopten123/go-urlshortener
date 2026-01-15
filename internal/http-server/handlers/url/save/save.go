@@ -16,7 +16,7 @@ import (
 )
 
 type Request struct {
-	URL   string `json:"urls" validate:"required,url"`
+	URL   string `json:"url" validate:"required,url"`
 	Alias string `json:"alias,omitempty"`
 }
 
@@ -27,7 +27,6 @@ type Response struct {
 
 const aliasLength = 6 // TODO: move to config
 
-//go:generate mockery --name=URLSaver --output=./mocks --outpkg=mocks --packages=go-urlshortener/internal/http-server/handlers/url/save
 type URLSaver interface {
 	SaveURL(urlToSave string, alias string) (int64, error)
 }
