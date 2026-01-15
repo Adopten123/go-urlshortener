@@ -26,6 +26,21 @@ func main() {
 		logger.Error("failed to init sqlite storage", sl.Err(err))
 		os.Exit(1)
 	}
+
+	id, err := storage.SaveURL("https://github.com/", "github")
+	if err != nil {
+		logger.Error("failed to save url", sl.Err(err))
+		os.Exit(1)
+	}
+	logger.Info("saved url", slog.Int64("id", id))
+
+	id, err = storage.SaveURL("https://github.com/", "github")
+	if err != nil {
+		logger.Error("failed to save url", sl.Err(err))
+		os.Exit(1)
+	}
+	logger.Info("saved url", slog.Int64("id", id))
+
 	_ = storage
 	// TODO: init router. Libs: chi, "chi render"
 	// TODO: run server.
