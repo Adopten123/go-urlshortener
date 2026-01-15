@@ -35,6 +35,7 @@ func main() {
 	router.Use(middleware.RequestID)
 	router.Use(middleware.Logger)
 
+	_ = storage
 	// TODO: run server.
 }
 
