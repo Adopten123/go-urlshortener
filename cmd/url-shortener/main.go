@@ -9,6 +9,8 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+
+	mwLogger "go-urlshortener/internal/http-server/middleware/logger"
 )
 
 const (
@@ -33,7 +35,7 @@ func main() {
 	router := chi.NewRouter()
 
 	router.Use(middleware.RequestID)
-	router.Use(middleware.Logger)
+	router.Use(mwLogger.New(logger))
 
 	_ = storage
 	// TODO: run server.
