@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967ee3de-e259-47b1-8398-b44cef680a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/http-server/handlers/url/save/save_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/lib/logger/handlers/slogdiscard/slogdiscard.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/storage.db" beforeDir="false" afterPath="$PROJECT_DIR$/storage/storage.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/http-server/handlers/url/save/save.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/http-server/handlers/url/save/save.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,34 +34,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.go build github.com/Adopten123/go-url-shortener.executor": "Run",
-    "Go Build.go build github.com/Adopten123/go-urlshortener.executor": "Run",
-    "Go Build.go build go-urlshortener.executor": "Run",
-    "Go Build.go build go-urlshortener/cmd/url-shortener.executor": "Run",
-    "Go Test.TestNewRandomString/size_=_1 in go-urlshortener/internal/lib/random.executor": "Run",
-    "Go Test.random_test.go.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.GoLinterPluginOnboarding": "true",
-    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "C:/Users/sanha",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "F:/programming/go/go-urlshortener/main.go",
-    "settings.editor.selected.configurable": "com.goide.configuration.GoProjectSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build github.com/Adopten123/go-url-shortener.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build github.com/Adopten123/go-urlshortener.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build go-urlshortener.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build go-urlshortener/cmd/url-shortener.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestNewRandomString/size_=_1 in go-urlshortener/internal/lib/random.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.random_test.go.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginOnboarding&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanha&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;F:/programming/go/go-urlshortener/main.go&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.goide.configuration.GoLibrariesConfigurableProvider&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\programming\go\go-urlshortener\internal\http-server\middleware\logger" />

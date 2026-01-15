@@ -12,6 +12,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"
 	"github.com/go-playground/validator/v10"
+	_ "github.com/vektra/mockery"
 )
 
 type Request struct {
@@ -26,6 +27,7 @@ type Response struct {
 
 const aliasLength = 6 // TODO: move to config
 
+//go:generate mockery --name=URLSaver --output=./mocks --outpkg=mocks --packages=go-urlshortener/internal/http-server/handlers/url/save
 type URLSaver interface {
 	SaveURL(urlToSave string, alias string) (int64, error)
 }
