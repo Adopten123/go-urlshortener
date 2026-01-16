@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="967ee3de-e259-47b1-8398-b44cef680a49" name="Changes" comment="" />
+    <list default="true" id="967ee3de-e259-47b1-8398-b44cef680a49" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/internal/lib/api/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/http-server/handlers/redirect/redirect_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/http-server/handlers/redirect/redirect_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/http-server/handlers/url/save/save_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/http-server/handlers/url/save/save_test.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +44,8 @@
     "Go Build.go build go-urlshortener/cmd/url-shortener.executor": "Run",
     "Go Test.TestNewRandomString/size_=_1 in go-urlshortener/internal/lib/random.executor": "Run",
     "Go Test.random_test.go.executor": "Run",
+    "Go Test.redirect_test.go (1).executor": "Run",
+    "Go Test.redirect_test.go.executor": "Run",
     "Go Test.save_test.go.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboarding": "true",
@@ -63,7 +71,7 @@
       <recent name="F:\programming\go\go-urlshortener\internal\http-server\middleware\logger" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-urlshortener/cmd/url-shortener">
+  <component name="RunManager" selected="Go Test.redirect_test.go (1)">
     <configuration name="go build go-urlshortener/cmd/url-shortener" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="go-urlshortener" />
       <working_directory value="$PROJECT_DIR$" />
@@ -99,6 +107,26 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="redirect_test.go (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-urlshortener" />
+      <working_directory value="$PROJECT_DIR$/internal/http-server/handlers/redirect" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/internal/http-server/handlers/redirect/redirect_test.go" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redirect_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-urlshortener" />
+      <working_directory value="$PROJECT_DIR$/internal/http-server/handlers/redirect" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/internal/http-server/handlers/redirect/redirect_test.go" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <configuration name="save_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-urlshortener" />
       <working_directory value="$PROJECT_DIR$/internal/http-server/handlers/url/save" />
@@ -111,12 +139,16 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build go-urlshortener/cmd/url-shortener" />
+      <item itemvalue="Go Test.redirect_test.go (1)" />
+      <item itemvalue="Go Test.redirect_test.go" />
       <item itemvalue="Go Test.save_test.go" />
       <item itemvalue="Go Test.TestNewRandomString/size_=_1 in go-urlshortener/internal/lib/random" />
       <item itemvalue="Go Test.random_test.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.redirect_test.go (1)" />
+        <item itemvalue="Go Test.redirect_test.go" />
         <item itemvalue="Go Test.save_test.go" />
         <item itemvalue="Go Test.random_test.go" />
         <item itemvalue="Go Test.TestNewRandomString/size_=_1 in go-urlshortener/internal/lib/random" />
